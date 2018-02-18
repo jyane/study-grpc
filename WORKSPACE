@@ -9,7 +9,3 @@ http_archive(
 load("@grpc_java//:repositories.bzl", "grpc_java_repositories")
 
 grpc_java_repositories()
-
-maven_jar(
-    name = "io_grpc_grpc_service"
-)
