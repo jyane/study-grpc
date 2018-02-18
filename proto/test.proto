@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package jyane.grpc.testing;
+
+message SimpleRequest {
+  string str = 1;
+}
+
+message SimpleResponse {
+  string str = 1;
+}
+
+service TestService {
+  rpc UnaryCall(SimpleRequest) returns (SimpleResponse);
+  rpc ClientStreamCall(stream SimpleRequest) returns (SimpleResponse);
+  rpc ServerStreamCall(SimpleRequest) returns (stream SimpleResponse);
+  rpc BidiStreamCall(stream SimpleRequest) returns (stream SimpleResponse);
+}
