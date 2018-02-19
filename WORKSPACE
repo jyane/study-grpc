@@ -21,3 +21,13 @@ maven_jar(
     artifact = "com.google.instrumentation:instrumentation-api:0.4.3",
     sha1 = "41614af3429573dc02645d541638929d877945a2",
 )
+
+maven_jar(
+    name = "io_opencensus_opencensus_exporter_stats_prometheus",
+    artifact = "io.opencensus:opencensus-exporter-stats-prometheus:0.12.0",
+)
+
+maven_jar(
+    name = "io_opencensus_opencensus_impl",
+    artifact = "io.opencensus:opencensus-impl:0.12.0",
+)
