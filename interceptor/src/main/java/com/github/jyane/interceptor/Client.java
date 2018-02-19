@@ -1,4 +1,4 @@
-package com.github.jyane;
+package com.github.jyane.interceptor;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

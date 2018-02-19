@@ -1,8 +1,9 @@
-package com.github.jyane;
+package com.github.jyane.census;
 
-import com.github.jyane.interceptor.LoggingInterceptor;
 import com.github.jyane.service.TestServiceImpl;
 import io.grpc.ServerBuilder;
+import io.grpc.protobuf.services.ProtoReflectionService;
+import io.grpc.services.MonitoringService;
 import java.io.IOException;
 import java.util.logging.Logger;
 
@@ -15,7 +16,8 @@ public class Server {
     int port = 50051;
     server = ServerBuilder.forPort(port)
         .addService(new TestServiceImpl())
-        .intercept(new LoggingInterceptor())
+        .addService(MonitoringService.getInstance())
+        .addService(ProtoReflectionService.newInstance())
         .build()
         .start();
     logger.info("Start at port: " + port);

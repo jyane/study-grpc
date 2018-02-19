@@ -1,4 +1,4 @@
-package com.github.jyane.interceptor;
+package com.github.jyane.interceptor.interceptor;
 
 import io.grpc.ForwardingServerCall.SimpleForwardingServerCall;
 import io.grpc.ForwardingServerCallListener;
